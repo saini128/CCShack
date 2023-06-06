@@ -17,48 +17,197 @@ class _Register extends State<Register> {
       body: Stack(
         children: [
           Column(
+            mainAxisSize: MainAxisSize.max,
             children: [
               Row(
+                mainAxisSize: MainAxisSize.max,
                 children: [
-                  Container(),
+                  Container(
+                    width: MediaQuery.of(context).size.width,
+                    height: 100,
+                    decoration: BoxDecoration(
+                      color: Color.fromRGBO(40 , 40, 40, 1),
+                      
+                    ),
+                  ),
                 ],
               ),
-              Column(
-                children: [
-                  Column(
+              Padding(
+                  padding: EdgeInsetsDirectional.fromSTEB(10, 20, 0, 0),
+                  child:  Column(
+                    mainAxisSize: MainAxisSize.max,
+                    mainAxisAlignment: MainAxisAlignment.spaceBetween,
                     children: [
-                      TextField(
-                        controller: _name,
-                        decoration: InputDecoration(
-                            hintText: 'Enter your name here...',
-                            border: InputBorder.none),
+                  Padding(
+                  padding: EdgeInsetsDirectional.fromSTEB(24, 0, 24, 36),
+                  child:Column(
+                    mainAxisSize: MainAxisSize.max,
+                  children: [
+                    TextFormField(
+                      controller: _name,
+                      decoration: InputDecoration(
+                        labelText: 'Full Name',
+                        hintText: 'Enter your name here...',
+                        enabledBorder: OutlineInputBorder(
+                          borderSide: BorderSide(
+                            //color: FlutterFlowTheme.of(context).secondary,
+                            width: 1,
+                          ),
+                          borderRadius: BorderRadius.circular(8),
+                        ),
+                        focusedBorder: OutlineInputBorder(
+                          borderSide: BorderSide(
+                            color: Color(0x00000000),
+                            width: 1,
+                          ),
+                          borderRadius: BorderRadius.circular(8),
+                        ),
+                        errorBorder: OutlineInputBorder(
+                          borderSide: BorderSide(
+                            color: Color(0x00000000),
+                            width: 1,
+                          ),
+                          borderRadius: BorderRadius.circular(8),
+                        ),
+                        focusedErrorBorder: OutlineInputBorder(
+                          borderSide: BorderSide(
+                            color: Color(0x00000000),
+                            width: 1,
+                          ),
+                          borderRadius: BorderRadius.circular(8),
+                        ),
+                        filled: true,
+                        //fillColor: FlutterFlowTheme.of(context).secondary,
                       ),
-                      TextField(
+                    ),
+                    Padding(
+                      padding: EdgeInsetsDirectional.fromSTEB(0, 20, 0, 0),
+                      child:TextFormField(
                         controller: _email,
                         decoration: InputDecoration(
-                            hintText: 'Enter your email here...',
-                            border: InputBorder.none),
-                      ),
-                      TextField(
+                          labelText: 'Email ID',
+                          hintText: 'Enter your email address here...',
+                          enabledBorder: OutlineInputBorder(
+                            borderSide: BorderSide(
+                              //color: FlutterFlowTheme.of(context).secondary,
+                              width: 1,
+                            ),
+                            borderRadius: BorderRadius.circular(8),
+                          ),
+                          focusedBorder: OutlineInputBorder(
+                            borderSide: BorderSide(
+                              color: Color(0x00000000),
+                              width: 1,
+                            ),
+                            borderRadius: BorderRadius.circular(8),
+                          ),
+                          errorBorder: OutlineInputBorder(
+                            borderSide: BorderSide(
+                              color: Color(0x00000000),
+                              width: 1,
+                            ),
+                            borderRadius: BorderRadius.circular(8),
+                          ),
+                          focusedErrorBorder: OutlineInputBorder(
+                            borderSide: BorderSide(
+                              color: Color(0x00000000),
+                              width: 1,
+                            ),
+                            borderRadius: BorderRadius.circular(8),
+                          ),
+                          filled: true,
+                          //fillColor: FlutterFlowTheme.of(context).secondary,
+                        ),
+                        keyboardType: TextInputType.emailAddress,
+
+                      ),),
+                      Padding(
+                      padding: EdgeInsetsDirectional.fromSTEB(0, 20, 0, 0),
+                      child:TextFormField(
                         controller: _password,
                         obscureText: true,
                         decoration: InputDecoration(
-                            hintText: 'Enter your password here...',
-                            border: InputBorder.none),
-                      ),
-                      TextField(
+                          labelText: 'Password',
+                          hintText: 'Enter your password here...',
+                          enabledBorder: OutlineInputBorder(
+                            borderSide: BorderSide(
+                              //color: FlutterFlowTheme.of(context).secondary,
+                              width: 1,
+                            ),
+                            borderRadius: BorderRadius.circular(8),
+                          ),
+                          focusedBorder: OutlineInputBorder(
+                            borderSide: BorderSide(
+                              color: Color(0x00000000),
+                              width: 1,
+                            ),
+                            borderRadius: BorderRadius.circular(8),
+                          ),
+                          errorBorder: OutlineInputBorder(
+                            borderSide: BorderSide(
+                              color: Color(0x00000000),
+                              width: 1,
+                            ),
+                            borderRadius: BorderRadius.circular(8),
+                          ),
+                          focusedErrorBorder: OutlineInputBorder(
+                            borderSide: BorderSide(
+                              color: Color(0x00000000),
+                              width: 1,
+                            ),
+                            borderRadius: BorderRadius.circular(8),
+                          ),
+                          filled: true,
+                          //fillColor: FlutterFlowTheme.of(context).secondary,
+                        ),
+                      ),),
+                    Padding(
+                      padding: EdgeInsetsDirectional.fromSTEB(0, 20, 0, 0),
+                      child:TextFormField(
                         controller: _cpassword,
                         obscureText: true,
                         decoration: InputDecoration(
-                            hintText: 'Confirm password here...',
-                            border: InputBorder.none),
-                      ),
-                      ElevatedButton(
+                          labelText: 'Confirm Password',
+                          hintText: 'Enter your password again...',
+                          enabledBorder: OutlineInputBorder(
+                            borderSide: BorderSide(
+                              //color: FlutterFlowTheme.of(context).secondary,
+                              width: 1,
+                            ),
+                            borderRadius: BorderRadius.circular(8),
+                          ),
+                          focusedBorder: OutlineInputBorder(
+                            borderSide: BorderSide(
+                              color: Color(0x00000000),
+                              width: 1,
+                            ),
+                            borderRadius: BorderRadius.circular(8),
+                          ),
+                          errorBorder: OutlineInputBorder(
+                            borderSide: BorderSide(
+                              color: Color(0x00000000),
+                              width: 1,
+                            ),
+                            borderRadius: BorderRadius.circular(8),
+                          ),
+                          focusedErrorBorder: OutlineInputBorder(
+                            borderSide: BorderSide(
+                              color: Color(0x00000000),
+                              width: 1,
+                            ),
+                            borderRadius: BorderRadius.circular(8),
+                          ),
+                          filled: true,
+                          //fillColor: FlutterFlowTheme.of(context).secondary,
+                        ),
+                      ),),
+
+                    Padding(
+                      padding: EdgeInsetsDirectional.fromSTEB(0, 20, 0, 0),
+                      child:ElevatedButton(
                         onPressed: () {
                           _dialogBuilder(context);
-                            //Navigator.push(
-                          //  context,
-                             //MaterialPageRoute(builder: (context) =>  Login()),);
+
                         },
                         child: Text(
                           'Create Account',
@@ -66,39 +215,44 @@ class _Register extends State<Register> {
                             fontSize: 40,
                           ),
                         ),
-                      )
-                    ],
+                      ),),
+
+                  ],
+                ),
                   ),
-                  Column(
-                    children: [
-                      Row(
+
+                      Column(
                         children: [
-                          Text(
-                            'Already have an account?   ',
-                            style: TextStyle(
-                              fontSize: 18,
-                              fontWeight: FontWeight.w500,
-                            ),
-                          ),
-                          ElevatedButton(
-                            onPressed: (){
-                              Navigator.push(
-                                context,
-                                MaterialPageRoute(builder: (context) =>  Login()),);
-                            },
-                            child: Text(
-                              'Login',
-                              style: TextStyle(
-                                fontSize: 18,
+                          Row(
+                            children: [
+                              Text(
+                                'Already have an account?   ',
+                                style: TextStyle(
+                                  fontSize: 18,
+                                  fontWeight: FontWeight.w500,
+                                ),
                               ),
-                            ),
+                              ElevatedButton(
+                                onPressed: (){
+                                  Navigator.push(
+                                    context,
+                                    MaterialPageRoute(builder: (context) =>  Login()),);
+                                },
+                                child: Text(
+                                  'Login',
+                                  style: TextStyle(
+                                    fontSize: 18,
+                                  ),
+                                ),
+                              )
+                            ],
                           )
                         ],
-                      )
+                      ),
                     ],
                   ),
-                ],
               ),
+
             ],
           )
         ],
