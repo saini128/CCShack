@@ -1,6 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'register.dart';
+import 'traderHome.dart';
+import 'clientHome.dart';
 
 class Login extends StatefulWidget {
   Login({Key? key}) : super(key: key);
@@ -43,7 +45,22 @@ class _Login extends State<Login> {
                       ),
                       ElevatedButton(
                         onPressed: () {
-                          
+                          String em=_email.text;
+                          String pswd=_password.text;
+                          if(em=='trader@CCS.com' && pswd=='123')
+                            {
+                              Navigator.push(
+                                context,
+                                MaterialPageRoute(builder: (context) =>  TraderHome()),);
+                            }
+                          if(em=='client@CCS.com' && pswd=='123')
+                          {
+                            Navigator.push(
+                              context,
+                              MaterialPageRoute(builder: (context) =>  ClientHome()),);
+
+                          }
+
                         },
                         child: Text(
                           'Login',
