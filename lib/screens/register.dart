@@ -8,7 +8,10 @@ class Register extends StatefulWidget {
   State<Register> createState() => _Register();
 }
 class _Register extends State<Register> {
-  final _todoController = TextEditingController();
+  final _email = TextEditingController();
+  final _name = TextEditingController();
+  final _password = TextEditingController();
+  final _cpassword = TextEditingController();
   Widget build(BuildContext context) {
     return Scaffold(
       body: Stack(
@@ -25,25 +28,27 @@ class _Register extends State<Register> {
                   Column(
                     children: [
                       TextField(
-                        controller: _todoController,
+                        controller: _name,
                         decoration: InputDecoration(
                             hintText: 'Enter your name here...',
                             border: InputBorder.none),
                       ),
                       TextField(
-                        controller: _todoController,
+                        controller: _email,
                         decoration: InputDecoration(
                             hintText: 'Enter your email here...',
                             border: InputBorder.none),
                       ),
                       TextField(
-                        controller: _todoController,
+                        controller: _password,
+                        obscureText: true,
                         decoration: InputDecoration(
                             hintText: 'Enter your password here...',
                             border: InputBorder.none),
                       ),
                       TextField(
-                        controller: _todoController,
+                        controller: _cpassword,
+                        obscureText: true,
                         decoration: InputDecoration(
                             hintText: 'Confirm password here...',
                             border: InputBorder.none),

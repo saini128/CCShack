@@ -9,7 +9,9 @@ class Login extends StatefulWidget {
   State<Login> createState() => _Login();
 }
 class _Login extends State<Login> {
-  final _todoController = TextEditingController();
+  final _email = TextEditingController();
+  final _password = TextEditingController();
+
   Widget build(BuildContext context) {
     return Scaffold(
       body: Stack(
@@ -27,13 +29,14 @@ class _Login extends State<Login> {
                     children: [
 
                       TextField(
-                        controller: _todoController,
+                        controller: _email,
                         decoration: InputDecoration(
                             hintText: 'Enter your email here...',
                             border: InputBorder.none),
                       ),
                       TextField(
-                        controller: _todoController,
+                        controller: _password,
+                        obscureText: true,
                         decoration: InputDecoration(
                             hintText: 'Enter your password here...',
                             border: InputBorder.none),
