@@ -17,53 +17,101 @@ class _HomeState extends State<Home> {
       body: Stack(
         children: [
           Container(
-          padding: EdgeInsets.symmetric(
-          horizontal: 20,
-          ),
+            padding: EdgeInsetsDirectional.fromSTEB(0, 70, 0, 0),
           child: Column(
           children: [
-            Row(
-              //Image.asset(assets/logo.png,fit: BoxFit.cover,),
-              children: [
-                Container(
-                  child: Image.asset('assets/logo.png',
-                    fit: BoxFit.cover,),
-                )
-              ],
+            Expanded(
+              child: Row(
+                mainAxisSize: MainAxisSize.max,
+                mainAxisAlignment: MainAxisAlignment.center,
+                crossAxisAlignment: CrossAxisAlignment.center,
+                children: [
+                  Image.asset(
+                    'assets/logo.png',
+                    width: 164,
+                    height: 234,
+                    fit: BoxFit.fitHeight,
+                  ),
+                ],
+              ),
             ),
-            Row(
-              children: [
-                Column(
-                  children: [
-                    ElevatedButton(
-                        onPressed: (){
-                          Navigator.push(
-                              context,
-                              MaterialPageRoute(builder: (context) =>  Register()),);
-                        },
-                        child: Text(
-                          'Register',
-                          style: TextStyle(
-                            fontSize: 40,
+            Expanded(
+              child: Row(
+                mainAxisSize: MainAxisSize.max,
+                mainAxisAlignment: MainAxisAlignment.center,
+                crossAxisAlignment: CrossAxisAlignment.center,
+                children: [
+                  Expanded(
+                    child: Padding(
+                      padding: EdgeInsetsDirectional.fromSTEB(0, 20, 0, 0),
+                      child: Column(
+                        mainAxisSize: MainAxisSize.max,
+                        children: [
+                          Padding(
+                            padding: EdgeInsetsDirectional.fromSTEB(0, 2, 0, 20),
+                            child: ElevatedButton(
+                              onPressed: ()  {
+                                Navigator.push(
+                                  context,
+                                  MaterialPageRoute(builder: (context) =>  Register()),);
+
+                              },
+                              child:  Text('Register', style: TextStyle(
+                                fontSize: 18,
+                              ),),
+                              style: ElevatedButton.styleFrom(
+                                backgroundColor: Color.fromRGBO(66, 190, 165, 1),
+                                // width: 200,
+                                // height: 50,
+                                minimumSize: Size(200, 50),
+                                padding: EdgeInsetsDirectional.fromSTEB(0, 0, 0, 0),
+                               // iconPadding: EdgeInsetsDirectional.fromSTEB(0, 0, 0, 0),
+                                //color: FlutterFlowTheme.of(context).primary,
+
+                                elevation: 3,
+                                // borderSide: BorderSide(
+                                //   color: Colors.transparent,
+                                //   width: 1,
+                                // ),
+                                // borderRadius: BorderRadius.circular(8),
+                              ),
+                            ),
                           ),
-                        ),
-                    ),
-                    ElevatedButton(
-                      onPressed: (){
-                        Navigator.push(
-                          context,
-                          MaterialPageRoute(builder: (context) =>  Login()),);
-                      },
-                      child: Text(
-                        'Login',
-                        style: TextStyle(
-                          fontSize: 40,
-                        ),
+                          ElevatedButton(
+                            onPressed: ()  {
+                              Navigator.push(
+                                context,
+                                MaterialPageRoute(builder: (context) =>  Login()),);
+
+                            },
+                            child:  Text('Login', style: TextStyle(
+                              color: Color.fromRGBO(66, 190, 165, 1),
+                              fontSize: 18,
+                            ),),
+                            style: ElevatedButton.styleFrom(
+                              backgroundColor: Colors.white,
+                              // width: 200,
+                              // height: 50,
+                              minimumSize: Size(200, 50),
+
+                              padding: EdgeInsetsDirectional.fromSTEB(0, 0, 0, 0),
+                              //iconPadding: EdgeInsetsDirectional.fromSTEB(0, 0, 0, 0),
+                              //color: Colors.white,
+
+                              elevation: 3,
+                              // borderSide: BorderSide(
+                              //   color: Colors.transparent,
+                              //   width: 1,
+                              // ),
+                              // borderRadius: BorderRadius.circular(8),
+                            ),
+                          ),
+                        ],
                       ),
-                    )
-                  ],
-                )
-              ],
+                    ),
+                  ),
+                ],
+              ),
             ),
           ],
           ),
