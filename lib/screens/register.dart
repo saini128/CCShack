@@ -17,24 +17,27 @@ class _Register extends State<Register> {
 
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(
-        leading: IconButton(
-          icon: Icon(Icons.arrow_back),
-          onPressed: () {
-            Navigator.pop(context);
-          },
-        ),
-        title: Text('Back Page'),
-      ),
+      backgroundColor: Color.fromRGBO(40, 40, 40, 1),
+      // appBar: AppBar(
+      //   leading: IconButton(
+      //     icon: Icon(Icons.arrow_back),
+      //     onPressed: () {
+      //       Navigator.pop(context);
+      //     },
+      //   ),
+      //   title: Text('Back Page'),
+      // ),
       body: Center(
         child: SingleChildScrollView(
           child: Column(
             mainAxisAlignment: MainAxisAlignment.center,
             children: [
               Container(
+
                 width: MediaQuery.of(context).size.width,
                 height: 100,
                 decoration: BoxDecoration(
+
                   color: Color.fromRGBO(40, 40, 40, 1),
                 ),
                 child: Center(
@@ -55,8 +58,10 @@ class _Register extends State<Register> {
                     TextFormField(
                       controller: _name,
                       decoration: InputDecoration(
+                        fillColor: Colors.white,
                         labelText: 'Full Name',
                         hintText: 'Enter your name',
+
                         enabledBorder: OutlineInputBorder(
                           borderSide: BorderSide(
                             width: 1,
@@ -65,7 +70,7 @@ class _Register extends State<Register> {
                         ),
                         focusedBorder: OutlineInputBorder(
                           borderSide: BorderSide(
-                            color: Color(0x00000000),
+                            color: Color.fromRGBO(66, 190, 165, 1),
                             width: 1,
                           ),
                           borderRadius: BorderRadius.circular(8),
@@ -85,13 +90,15 @@ class _Register extends State<Register> {
                           borderRadius: BorderRadius.circular(8),
                         ),
                         filled: true,
-                        labelStyle: TextStyle(color: Colors.deepPurple),
+                        labelStyle: TextStyle(color: Colors.black),
                       ),
                     ),
                     SizedBox(height: 25),
                     TextFormField(
+
                       controller: _email,
                       decoration: InputDecoration(
+                        fillColor: Colors.white,
                         labelText: 'Email ID',
                         hintText: 'Enter your email address',
                         enabledBorder: OutlineInputBorder(
@@ -122,7 +129,7 @@ class _Register extends State<Register> {
                           borderRadius: BorderRadius.circular(8),
                         ),
                         filled: true,
-                        labelStyle: TextStyle(color: Colors.deepPurple),
+                        labelStyle: TextStyle(color: Colors.black),
                       ),
                       keyboardType: TextInputType.emailAddress,
                     ),
@@ -131,6 +138,7 @@ class _Register extends State<Register> {
                       controller: _password,
                       obscureText: true,
                       decoration: InputDecoration(
+                        fillColor: Colors.white,
                         labelText: 'Password',
                         hintText: 'Enter your password',
                         enabledBorder: OutlineInputBorder(
@@ -161,7 +169,7 @@ class _Register extends State<Register> {
                           borderRadius: BorderRadius.circular(8),
                         ),
                         filled: true,
-                        labelStyle: TextStyle(color: Colors.deepPurple),
+                        labelStyle: TextStyle(color: Colors.black),
                       ),
                     ),
                     SizedBox(height: 25),
@@ -169,6 +177,7 @@ class _Register extends State<Register> {
                       controller: _cpassword,
                       obscureText: true,
                       decoration: InputDecoration(
+                        fillColor: Colors.white,
                         labelText: 'Confirm Password',
                         hintText: 'Confirm your password',
                         enabledBorder: OutlineInputBorder(
@@ -199,7 +208,7 @@ class _Register extends State<Register> {
                           borderRadius: BorderRadius.circular(8),
                         ),
                         filled: true,
-                        labelStyle: TextStyle(color: Colors.deepPurple),
+                        labelStyle: TextStyle(color: Colors.black),
                       ),
                     ),
                     SizedBox(height: 25),
@@ -228,13 +237,15 @@ class _Register extends State<Register> {
                       ),
                       style: ButtonStyle(
                         backgroundColor: MaterialStateProperty.all<Color>(
-                            Colors.deepPurpleAccent),
+                          Color.fromRGBO(66, 190, 165, 1),),
+
                         shape:
-                            MaterialStateProperty.all<RoundedRectangleBorder>(
+                        MaterialStateProperty.all<RoundedRectangleBorder>(
                           RoundedRectangleBorder(
                             borderRadius: BorderRadius.circular(10.0),
                           ),
                         ),
+
                       ),
                     ),
                     SizedBox(height: 30),
@@ -256,7 +267,8 @@ class _Register extends State<Register> {
                         );
                       },
                       style: ElevatedButton.styleFrom(
-                        primary: Colors.deepPurple,
+                        primary: Colors.white,
+                        elevation: 5,
                         shape: RoundedRectangleBorder(
                           borderRadius: BorderRadius.circular(10.0),
                         ),
@@ -266,6 +278,7 @@ class _Register extends State<Register> {
                         child: Text(
                           'Login',
                           style: TextStyle(
+                            color: Color.fromRGBO(66, 190, 165, 1),
                             fontSize: 18,
                           ),
                         ),

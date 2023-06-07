@@ -33,15 +33,7 @@ class _Login extends State<Login> {
 
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(
-        leading: IconButton(
-          icon: Icon(Icons.arrow_back),
-          onPressed: () {
-            Navigator.pop(context);
-          },
-        ),
-        title: Text('Back Page'),
-      ),
+      backgroundColor: Color.fromRGBO(40, 40, 40, 1),
       body: Center(
         child: SingleChildScrollView(
           child: Column(
@@ -71,6 +63,7 @@ class _Login extends State<Login> {
                     TextFormField(
                       controller: _email,
                       decoration: InputDecoration(
+                        fillColor: Colors.white,
                         labelText: 'Email ID',
                         hintText: 'Enter your email address',
                         enabledBorder: OutlineInputBorder(
@@ -101,7 +94,7 @@ class _Login extends State<Login> {
                           borderRadius: BorderRadius.circular(8),
                         ),
                         filled: true,
-                        labelStyle: TextStyle(color: Colors.deepPurple),
+                        labelStyle: TextStyle(color: Colors.black),
                       ),
                       keyboardType: TextInputType.emailAddress,
                     ),
@@ -110,6 +103,7 @@ class _Login extends State<Login> {
                       controller: _password,
                       obscureText: true,
                       decoration: InputDecoration(
+                        fillColor: Colors.white,
                         labelText: 'Password',
                         hintText: 'Enter your password',
                         enabledBorder: OutlineInputBorder(
@@ -140,7 +134,7 @@ class _Login extends State<Login> {
                           borderRadius: BorderRadius.circular(8),
                         ),
                         filled: true,
-                        labelStyle: TextStyle(color: Colors.deepPurple),
+                        labelStyle: TextStyle(color: Colors.black),
                       ),
                     ),
                     SizedBox(height: 25),
@@ -178,7 +172,7 @@ class _Login extends State<Login> {
                         ),
                       ),
                       style: ButtonStyle(
-                        backgroundColor: MaterialStateProperty.all<Color>(Colors.deepPurpleAccent),
+                        backgroundColor: MaterialStateProperty.all<Color>(Color.fromRGBO(66, 190, 165, 1),),
                         shape: MaterialStateProperty.all<RoundedRectangleBorder>(
                           RoundedRectangleBorder(
                             borderRadius: BorderRadius.circular(10.0),
@@ -205,7 +199,7 @@ class _Login extends State<Login> {
                         );
                       },
                       style: ElevatedButton.styleFrom(
-                        primary: Colors.deepPurple,
+                        backgroundColor: Colors.white,
                         shape: RoundedRectangleBorder(
                           borderRadius: BorderRadius.circular(10.0),
                         ),
@@ -215,6 +209,7 @@ class _Login extends State<Login> {
                         child: Text(
                           'Create Account',
                           style: TextStyle(
+                            color: Color.fromRGBO(66, 190, 165, 1),
                             fontSize: 18,
                           ),
                         ),

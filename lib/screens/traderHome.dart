@@ -1,3 +1,5 @@
+
+
 import 'package:flutter/material.dart';
 
 class TraderHome extends StatefulWidget {
@@ -18,30 +20,30 @@ class _TraderHome extends State<TraderHome> {
           mainAxisAlignment: MainAxisAlignment.spaceBetween,
           children: [
 
-          Text(
-          'Welcome Trader',
-          style: TextStyle(
-            color: Colors.white,
-            fontWeight: FontWeight.bold,
-            fontSize: 28,
-          ),
-          ),
+            Text(
+              'Welcome Trader',
+              style: TextStyle(
+                color: Colors.white,
+                fontWeight: FontWeight.bold,
+                fontSize: 28,
+              ),
+            ),
             ElevatedButton(
-                onPressed: (){
-                  Navigator.pop(context);
-                },
-                child: Text('Logout'),
+              onPressed: (){
+                Navigator.pop(context);
+              },
+              child: Text('Logout'),
               style: ElevatedButton.styleFrom(
-                backgroundColor: Color.fromRGBO(56, 170, 145, 1),
-                elevation: 3
+                  backgroundColor: Color.fromRGBO(56, 170, 145, 1),
+                  elevation: 3
               ),
             ),
           ],
         ),
       ),
-      body: Stack(
-        children: [
-          Column(
+      body: Center(
+        child: SingleChildScrollView(
+          child: Column(
             children: [
               Padding(
                 padding: EdgeInsetsDirectional.fromSTEB(16, 15, 16, 0),
@@ -275,8 +277,12 @@ class _TraderHome extends State<TraderHome> {
               )
 
             ],
-          )
-        ],
+          ),
+        ),
+
+
+
+
       ),
     );
   }
