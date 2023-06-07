@@ -41,9 +41,9 @@ class _TraderHome extends State<TraderHome> {
           ],
         ),
       ),
-      body: Stack(
-        children: [
-          Column(
+      body: Center(
+        child: SingleChildScrollView(
+          child: Column(
             children: [
               Padding(
                 padding: EdgeInsetsDirectional.fromSTEB(16, 15, 16, 0),
@@ -277,8 +277,12 @@ class _TraderHome extends State<TraderHome> {
               )
 
             ],
-          )
-        ],
+          ),
+        ),
+
+
+
+
       ),
     );
   }
