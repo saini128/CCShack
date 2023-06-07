@@ -40,7 +40,7 @@ class _Login extends State<Login> {
             Navigator.pop(context);
           },
         ),
-        title: Text('Home Page'),
+        title: Text('Back Page'),
       ),
       body: Center(
         child: SingleChildScrollView(

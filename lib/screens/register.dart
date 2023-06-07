@@ -24,7 +24,7 @@ class _Register extends State<Register> {
             Navigator.pop(context);
           },
         ),
-        title: Text('Home Page'),
+        title: Text('Back Page'),
       ),
       body: Center(
         child: SingleChildScrollView(
