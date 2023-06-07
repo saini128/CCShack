@@ -199,7 +199,7 @@ class _Login extends State<Login> {
                         );
                       },
                       style: ElevatedButton.styleFrom(
-                        primary: Colors.white,
+                        backgroundColor: Colors.white,
                         shape: RoundedRectangleBorder(
                           borderRadius: BorderRadius.circular(10.0),
                         ),
