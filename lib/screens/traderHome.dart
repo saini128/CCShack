@@ -9,6 +9,18 @@ class TraderHome extends StatefulWidget {
   State<TraderHome> createState() => _TraderHome();
 }
 class _TraderHome extends State<TraderHome> {
+
+  int len=4;
+  var test="ABCD";
+
+  List<List<String>> messeges = [
+  ["Rs. 10,00,000.00 Allocated"],
+ [ "Session Started  10:44 AM 05/06/2023"],
+  ["Session Ended  2:44 AM 05/06/2023"],
+  ["Profit Collected from Trader Rs. 2,65,485.32 for 05/06/2023"],
+  ];
+
+
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
@@ -115,66 +127,26 @@ class _TraderHome extends State<TraderHome> {
                                       shrinkWrap: true,
                                       scrollDirection: Axis.vertical,
                                       children: [
-                                        Padding(
-                                          padding:
-                                          EdgeInsetsDirectional.fromSTEB(20, 10, 20, 0),
-                                          child: ListTile(
-                                            title: Text(
-                                              'Rs. 10,00,000 Allocated',
-                                              style: TextStyle(
-                                                color: Colors.green,
+
+                                        for(int i=0;i<len;i++)
+                                          Padding(
+                                            padding:
+                                            EdgeInsetsDirectional.fromSTEB(20, 10, 20, 0),
+                                            child: ListTile(
+                                              title: Text(
+                                                messeges[i][0].toString(),
+
+                                                style: TextStyle(
+
+                                                  color: Colors.green,
+                                                ),
                                               ),
+                                              dense: false,
+                                              contentPadding:
+                                              EdgeInsetsDirectional.fromSTEB(0, 10, 0, 0),
                                             ),
-                                            dense: false,
-                                            contentPadding:
-                                            EdgeInsetsDirectional.fromSTEB(0, 10, 0, 0),
                                           ),
-                                        ),
-                                        Padding(
-                                          padding:
-                                          EdgeInsetsDirectional.fromSTEB(20, 10, 20, 0),
-                                          child: ListTile(
-                                            title: Text(
-                                              'Session Started  10:44 AM 05/06/2023',
-                                              style: TextStyle(
-                                                color: Colors.red,
-                                              ),
-                                            ),
-                                            dense: false,
-                                            contentPadding:
-                                            EdgeInsetsDirectional.fromSTEB(0, 10, 0, 0),
-                                          ),
-                                        ),
-                                        Padding(
-                                          padding:
-                                          EdgeInsetsDirectional.fromSTEB(20, 10, 20, 0),
-                                          child: ListTile(
-                                            title: Text(
-                                              'Session Ended  2:44 AM 05/06/2023',
-                                              style: TextStyle(
-                                                color: Colors.red,
-                                              ),
-                                            ),
-                                            dense: false,
-                                            contentPadding:
-                                            EdgeInsetsDirectional.fromSTEB(0, 10, 0, 0),
-                                          ),
-                                        ),
-                                        Padding(
-                                          padding:
-                                          EdgeInsetsDirectional.fromSTEB(20, 10, 20, 0),
-                                          child: ListTile(
-                                            title: Text(
-                                              'Profit Collected from Trader Rs. 2,65,485.32 for 05/06/2023',
-                                              style: TextStyle(
-                                                color: Colors.green,
-                                              ),
-                                            ),
-                                            dense: false,
-                                            contentPadding:
-                                            EdgeInsetsDirectional.fromSTEB(0, 10, 0, 0),
-                                          ),
-                                        ),
+
                                       ],
                                     ),
                                   ),
@@ -194,6 +166,14 @@ class _TraderHome extends State<TraderHome> {
                                   child: ElevatedButton(
                                     onPressed: () {
                                       print('Button pressed ...');
+                                      String a="Session Started ";
+                                      a=a+DateTime.now().toString();
+                                      messeges.add([a.toString()]);
+                                      print(len);
+                                      len++;
+                                      setState(() {
+
+                                      });
                                     },
                                     child: Text('Start Session'),
                                     style: ElevatedButton.styleFrom(
@@ -220,6 +200,14 @@ class _TraderHome extends State<TraderHome> {
                                   child: ElevatedButton(
                                     onPressed: () {
                                       print('Button pressed ...');
+                                      String a="Session Ended ";
+                                      a=a+DateTime.now().toString();
+                                      messeges.add([a.toString()]);
+                                      print(len);
+                                      len++;
+                                      setState(() {
+
+                                      });
                                     },
                                     child: Text('End Session'),
                                     style: ElevatedButton.styleFrom(
@@ -279,10 +267,6 @@ class _TraderHome extends State<TraderHome> {
             ],
           ),
         ),
-
-
-
-
       ),
     );
   }
