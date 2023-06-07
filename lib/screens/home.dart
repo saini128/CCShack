@@ -13,7 +13,7 @@ class _HomeState extends State<Home> {
   Widget build(BuildContext context)
   {
     return Scaffold(
-      backgroundColor: Color.fromRGBO(40 , 40, 40, 1),
+      backgroundColor: Color.fromRGBO(40 ,40, 40, 1),
       body: Stack(
         children: [
           Container(
