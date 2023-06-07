@@ -1,16 +1,5 @@
-# npc
+# TradePool - A Collaborative Stock Trading Platform
 
-A new Flutter project.
+TradePool is a collaborative stock trading platform designed to empower individuals who aspire to actively trade in the stock market but lack the professional expertise. By leveraging the collective power of a pool, TradePool enables users to combine their resources and have them managed by skilled traders specializing in intraday trading strategies.
 
-## Getting Started
-
-This project is a starting point for a Flutter application.
-
-A few resources to get you started if this is your first Flutter project:
-
-- [Lab: Write your first Flutter app](https://docs.flutter.dev/get-started/codelab)
-- [Cookbook: Useful Flutter samples](https://docs.flutter.dev/cookbook)
-
-For help getting started with Flutter development, view the
-[online documentation](https://docs.flutter.dev/), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
+With TradePool's intuitive app, users can easily participate, monitor their investments, and engage with the trading community. Powered by a secure and reliable server infrastructure, TradePool ensures seamless capital flow management and safeguards user data and transactions. The platform adheres to all necessary legal and regulatory requirements, offering users peace of mind and a trustworthy trading environment.
